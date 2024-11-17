@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/18/%E2%80%9C%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95%E2%80%9D/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/18/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -176,7 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/11/18/%E2%80%9C%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95%E2%80%9D/" class="post-title-link" itemprop="url">“高精度算法”</a>
+            <a href="/2024/11/18/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">“高精度算法”</a>
         </h2>
 
         <div class="post-meta">
@@ -187,7 +187,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-11-18 00:33:36 / 修改时间：00:39:03" itemprop="dateCreated datePublished" datetime="2024-11-18T00:33:36+08:00">2024-11-18</time>
+              <time title="创建时间：2024-11-18 00:33:36 / 修改时间：00:44:20" itemprop="dateCreated datePublished" datetime="2024-11-18T00:33:36+08:00">2024-11-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -212,6 +212,9 @@
       
           <h2 id="高精度算法"><a href="#高精度算法" class="headerlink" title="高精度算法"></a>高精度算法</h2><p>高精度算法主要用于处理比普通数据类型更大的数值。普通的数据类型（如 <code>int</code>, <code>long long</code>）无法满足对非常大的数进行计算时的需求。高精度算法通过模拟手工运算过程，逐位处理数字，保证了数值的准确性和有效性。</p>
 <p>在高精度运算中，常见的操作包括加法、减法、乘法等，它们通常在字符串中以逐位的方式实现，以应对超过普通数据类型范围的数值。</p>
+<h3 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h3><p>去除字符串的前导零</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">RE0</span> <span class="params">(string &amp; str)</span> </span>&#123;</span><br><span class="line">    str.<span class="built_in">erase</span>(<span class="number">0</span>, str.<span class="built_in">find_first_not_of</span>(<span class="string">&quot;0&quot;</span>));</span><br><span class="line">    <span class="keyword">if</span> (str.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        str = <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h3><p>高精度加法通过逐位加法和进位处理来模拟实际的加法过程。下面是加法实现代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">add</span><span class="params">(string str1, string str2)</span> </span>&#123;</span><br><span class="line">    string str;</span><br><span class="line">    <span class="type">int</span> len1 = str<span class="number">1.</span><span class="built_in">size</span>();</span><br><span class="line">    <span class="type">int</span> len2 = str<span class="number">2.</span><span class="built_in">size</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 对齐两个字符串长度</span></span><br><span class="line">    <span class="keyword">if</span> (len1 &gt; len2) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len1 - len2; i++) &#123;</span><br><span class="line">            str2 = <span class="string">&quot;0&quot;</span> + str2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (len2 &gt; len1) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len2 - len1; i++) &#123;</span><br><span class="line">            str1 = <span class="string">&quot;0&quot;</span> + str1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> cf = <span class="number">0</span>; <span class="comment">// 进位</span></span><br><span class="line">    len1 = str<span class="number">1.</span><span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = len1 - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="type">int</span> temp = str1[i] - <span class="string">&#x27;0&#x27;</span> + str2[i] - <span class="string">&#x27;0&#x27;</span> + cf;</span><br><span class="line">        cf = temp / <span class="number">10</span>;  <span class="comment">// 更新进位</span></span><br><span class="line">        str = <span class="built_in">to_string</span>(temp % <span class="number">10</span>) + str;  <span class="comment">// 拼接结果</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (cf != <span class="number">0</span>) str = <span class="built_in">to_string</span>(cf) + str;  <span class="comment">// 如果有最终进位，加到结果前面</span></span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
