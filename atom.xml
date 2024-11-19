@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-19T05:26:28.236Z</updated>
+  <updated>2024-11-19T05:57:16.580Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移除元素</title>
+    <link href="http://example.com/2024/11/19/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
+    <id>http://example.com/2024/11/19/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</id>
+    <published>2024-11-19T05:29:06.000Z</published>
+    <updated>2024-11-19T05:57:16.580Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><span id="more"></span><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;移除元素&quot;&gt;&lt;a href=&quot;#移除元素&quot; class=&quot;headerlink&quot; title=&quot;移除元素&quot;&gt;&lt;/a&gt;移除元素&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>二分查找法</title>
