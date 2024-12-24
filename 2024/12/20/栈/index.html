@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="滑动窗口滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。">
+  <meta name="description" content="栈栈（Stack） 是一种常见的线性数据结构，具有后进先出（LIFO, Last In First Out）的特点。栈就像生活中的书堆或碟子堆，只能在一端进行操作：新元素从顶端加入，移除时也只能从顶端取出。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滑动窗口">
-<meta property="og:url" content="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/index.html">
+<meta property="og:title" content="栈">
+<meta property="og:url" content="http://example.com/2024/12/20/%E6%A0%88/index.html">
 <meta property="og:site_name" content="YuriCode">
-<meta property="og:description" content="滑动窗口滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。">
+<meta property="og:description" content="栈栈（Stack） 是一种常见的线性数据结构，具有后进先出（LIFO, Last In First Out）的特点。栈就像生活中的书堆或碟子堆，只能在一端进行操作：新元素从顶端加入，移除时也只能从顶端取出。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-02T02:46:35.000Z">
-<meta property="article:modified_time" content="2024-12-02T03:47:02.685Z">
+<meta property="article:published_time" content="2024-12-20T04:09:45.000Z">
+<meta property="article:modified_time" content="2024-12-20T05:57:23.844Z">
 <meta property="article:author" content="LunaMyth">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="栈">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+<link rel="canonical" href="http://example.com/2024/12/20/%E6%A0%88/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>滑动窗口 | YuriCode</title>
+  <title>栈 | YuriCode</title>
   
 
 
@@ -173,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/20/%E6%A0%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          滑动窗口
+          栈
         </h1>
 
         <div class="post-meta">
@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-12-02 10:46:35 / 修改时间：11:47:02" itemprop="dateCreated datePublished" datetime="2024-12-02T10:46:35+08:00">2024-12-02</time>
+              <time title="创建时间：2024-12-20 12:09:45 / 修改时间：13:57:23" itemprop="dateCreated datePublished" datetime="2024-12-20T12:09:45+08:00">2024-12-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -205,7 +205,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
                 </span>
             </span>
 
@@ -215,7 +215,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>914</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -234,13 +234,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。</p>
+        <h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈（Stack） 是一种常见的线性数据结构，具有后进先出（LIFO, Last In First Out）的特点。栈就像生活中的书堆或碟子堆，只能在一端进行操作：新元素从顶端加入，移除时也只能从顶端取出。</p>
 <span id="more"></span>
 
-<h3 id="长度最小的子数组（leetcode-209）"><a href="#长度最小的子数组（leetcode-209）" class="headerlink" title="长度最小的子数组（leetcode.209）"></a>长度最小的子数组（leetcode.209）</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/description/?envType=problem-list-v2&envId=sliding-window">https://leetcode.cn/problems/minimum-size-subarray-sum/description/?envType=problem-list-v2&amp;envId=sliding-window</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 左指针 l, 右指针 r, 当前窗口的和 sum, 最终答案 ans 初始化为 INT_MAX</span></span><br><span class="line">        <span class="type">int</span> l = <span class="number">0</span>, r = <span class="number">0</span>, sum = <span class="number">0</span>, ans = INT_MAX;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span> (r = <span class="number">0</span>; r &lt; nums.<span class="built_in">size</span>(); r++) &#123;</span><br><span class="line">            sum += nums[r];  </span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前窗口的和 sum 大于或等于 target，尝试缩小窗口</span></span><br><span class="line">            <span class="keyword">while</span> (sum - nums[l] &gt;= target) &#123;</span><br><span class="line">                sum -= nums[l++];  <span class="comment">// 左指针向右滑动，减少窗口和 sum</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前窗口的和 sum 大于或等于 target，更新答案</span></span><br><span class="line">            <span class="keyword">if</span> (sum &gt;= target) &#123;</span><br><span class="line">                ans = <span class="built_in">min</span>(ans, r - l + <span class="number">1</span>);  <span class="comment">// 更新最小窗口长度</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果没有找到符合条件的子数组，返回 0，否则返回最小长度</span></span><br><span class="line">        <span class="keyword">return</span> ans == INT_MAX ? <span class="number">0</span> : ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="用数组模拟栈"><a href="#用数组模拟栈" class="headerlink" title="用数组模拟栈"></a>用数组模拟栈</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="type">int</span> stk[N], tt = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	stk[++tt] = x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	tt--;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">empty</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (tt == <span class="number">-1</span>) cout &lt;&lt; <span class="string">&quot;YES&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;NO&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">query</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; stk[tt] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="type">int</span> M;</span><br><span class="line">	cin &gt;&gt; M;</span><br><span class="line">	<span class="type">int</span> x;</span><br><span class="line">	<span class="keyword">while</span> (M--) &#123;</span><br><span class="line">		string op;</span><br><span class="line">		cin &gt;&gt; op;</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="string">&quot;push&quot;</span>) &#123;</span><br><span class="line">			cin &gt;&gt; x;</span><br><span class="line">			<span class="built_in">push</span>(x);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;pop&quot;</span>) &#123;</span><br><span class="line">			<span class="built_in">pop</span>();</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;empty&quot;</span>) &#123;</span><br><span class="line">			<span class="built_in">empty</span>();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">query</span>();</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="无重复字符的最长字串（leetcode-3）"><a href="#无重复字符的最长字串（leetcode-3）" class="headerlink" title="无重复字符的最长字串（leetcode.3）"></a>无重复字符的最长字串（leetcode.3）</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=problem-list-v2&envId=sliding-window">https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=problem-list-v2&amp;envId=sliding-window</a></p>
+<h3 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h3><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/832/">https://www.acwing.com/problem/content/832/</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="type">int</span> stk[N], tt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>),cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	<span class="keyword">while</span> (N--) &#123;</span><br><span class="line">		<span class="type">int</span> x;</span><br><span class="line">		cin &gt;&gt; x;</span><br><span class="line">        <span class="comment">//如果栈顶元素大于等于当前待入栈元素，则出栈</span></span><br><span class="line">		<span class="keyword">while</span> (tt &gt; <span class="number">0</span> &amp;&amp; stk[tt] &gt;= x) tt--; </span><br><span class="line">        <span class="comment">//如果栈空，则没有比该元素小的值</span></span><br><span class="line">		<span class="keyword">if</span> (tt == <span class="number">0</span>) cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&quot; &quot;</span>;   </span><br><span class="line">        <span class="comment">//栈顶元素就是左侧第一个比它小的元素   </span></span><br><span class="line">		<span class="keyword">else</span> cout &lt;&lt; stk[tt] &lt;&lt; <span class="string">&quot; &quot;</span>;	  </span><br><span class="line">        <span class="comment">//入栈   </span></span><br><span class="line">		stk[++tt] = x;					    </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -250,7 +250,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%A0%88/" rel="tag"># 栈</a>
           </div>
 
         
@@ -259,12 +259,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/11/30/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%A7%E5%90%88%E9%9B%86/" rel="prev" title="排序算法大合集">
-      <i class="fa fa-chevron-left"></i> 排序算法大合集
+    <a href="/2024/12/10/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="prev" title="双指针">
+      <i class="fa fa-chevron-left"></i> 双指针
     </a></div>
       <div class="post-nav-item">
-    <a href="/2024/12/03/%E6%9C%89%E8%B6%A3%E7%9A%84%E9%A2%98%E8%A7%A3/" rel="next" title="有趣的题解">
-      有趣的题解 <i class="fa fa-chevron-right"></i>
+    <a href="/2024/12/20/%E9%98%9F%E5%88%97/" rel="next" title="队列">
+      队列 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -324,7 +324,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">滑动窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%EF%BC%88leetcode-209%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">长度最小的子数组（leetcode.209）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2%EF%BC%88leetcode-3%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">无重复字符的最长字串（leetcode.3）</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">1.</span> <span class="nav-text">栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E6%A0%88"><span class="nav-number">1.1.</span> <span class="nav-text">用数组模拟栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%B0%83%E6%A0%88"><span class="nav-number">1.2.</span> <span class="nav-text">单调栈</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
