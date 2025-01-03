@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.webp">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/logo.webp">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="STLSTL（Standard Template Library）是C++标准库的一部分，提供了一组通用的数据结构和算法，以便开发者能高效地处理常见的编程任务 vector12345678&#x2F;&#x2F; size()  返回元素个数&#x2F;&#x2F; empty()  返回是否为空&#x2F;&#x2F; clear()  清空&#x2F;&#x2F; front()&#x2F;back()&#x2F;&#x2F; push_back()&#x2F;pop_back()&#x2F;&#x2F; begin()&#x2F;end(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STL">
+<meta property="og:url" content="http://example.com/2025/01/03/STL/index.html">
+<meta property="og:site_name" content="YuriCode">
+<meta property="og:description" content="STLSTL（Standard Template Library）是C++标准库的一部分，提供了一组通用的数据结构和算法，以便开发者能高效地处理常见的编程任务 vector12345678&#x2F;&#x2F; size()  返回元素个数&#x2F;&#x2F; empty()  返回是否为空&#x2F;&#x2F; clear()  清空&#x2F;&#x2F; front()&#x2F;back()&#x2F;&#x2F; push_back()&#x2F;pop_back()&#x2F;&#x2F; begin()&#x2F;end(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-03T01:13:32.000Z">
+<meta property="article:modified_time" content="2025-01-03T01:39:07.272Z">
+<meta property="article:author" content="LunaMyth">
+<meta property="article:tag" content="STL">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2025/01/03/STL/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>STL | YuriCode</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="YuriCode" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">YuriCode</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/03/STL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="LunaMyth">
+      <meta itemprop="description" content="蘑菇酱~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuriCode">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          STL
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-01-03 09:13:32 / 修改时间：09:39:07" itemprop="dateCreated datePublished" datetime="2025-01-03T09:13:32+08:00">2025-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><p>STL（Standard Template Library）是C++标准库的一部分，提供了一组通用的数据结构和算法，以便开发者能高效地处理常见的编程任务</p>
+<h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()  返回元素个数</span></span><br><span class="line"><span class="comment">// empty()  返回是否为空</span></span><br><span class="line"><span class="comment">// clear()  清空</span></span><br><span class="line"><span class="comment">// front()/back()</span></span><br><span class="line"><span class="comment">// push_back()/pop_back()</span></span><br><span class="line"><span class="comment">// begin()/end()</span></span><br><span class="line"><span class="comment">// []</span></span><br><span class="line"><span class="comment">// 支持比较运算，按字典序</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// first, 第一个元素</span></span><br><span class="line"><span class="comment">// second, 第二个元素</span></span><br><span class="line"><span class="comment">// 支持比较运算，以first为第一关键字，以second为第二关键字（字典序）</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()/length()  返回字符串长度</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// clear()</span></span><br><span class="line"><span class="comment">// substr(起始下标，(子串长度))  返回子串</span></span><br><span class="line"><span class="comment">// c_str()  返回字符串所在字符数组的起始地址</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// push()  向队尾插入一个元素</span></span><br><span class="line"><span class="comment">// front()  返回队头元素</span></span><br><span class="line"><span class="comment">// back()  返回队尾元素</span></span><br><span class="line"><span class="comment">// pop()  弹出队头元素</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="priority-queue"><a href="#priority-queue" class="headerlink" title="priority_queue"></a>priority_queue</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// push()  插入一个元素</span></span><br><span class="line"><span class="comment">// top()  返回堆顶元素</span></span><br><span class="line"><span class="comment">// pop()  弹出堆顶元素</span></span><br><span class="line"><span class="comment">// 定义成小根堆的方式：priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; q;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// push()  向栈顶插入一个元素</span></span><br><span class="line"><span class="comment">// top()  返回栈顶元素</span></span><br><span class="line"><span class="comment">// pop()  弹出栈顶元素</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size()</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// clear()</span></span><br><span class="line"><span class="comment">// front()/back()</span></span><br><span class="line"><span class="comment">// push_back()/pop_back()</span></span><br><span class="line"><span class="comment">// push_front()/pop_front()</span></span><br><span class="line"><span class="comment">// begin()/end()</span></span><br><span class="line"><span class="comment">// []</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="set-map-multiset-multimap"><a href="#set-map-multiset-multimap" class="headerlink" title="set map multiset multimap"></a>set map multiset multimap</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基于平衡二叉树（红黑树）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// size()</span></span><br><span class="line"><span class="comment">// empty()</span></span><br><span class="line"><span class="comment">// clear()</span></span><br><span class="line"><span class="comment">// begin()/end()</span></span><br><span class="line"><span class="comment">// ++, -- 返回前驱和后继，时间复杂度 O(logn)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// set/multiset</span></span><br><span class="line"><span class="comment">//     insert()  插入一个数</span></span><br><span class="line"><span class="comment">//     find()  查找一个数</span></span><br><span class="line"><span class="comment">//     count()  返回某一个数的个数</span></span><br><span class="line"><span class="comment">//     erase()</span></span><br><span class="line"><span class="comment">//         (1) 输入是一个数x，删除所有x   O(k + logn)</span></span><br><span class="line"><span class="comment">//         (2) 输入一个迭代器，删除这个迭代器</span></span><br><span class="line"><span class="comment">//     lower_bound()/upper_bound()</span></span><br><span class="line"><span class="comment">//         lower_bound(x)  返回大于等于x的最小的数的迭代器</span></span><br><span class="line"><span class="comment">//         upper_bound(x)  返回大于x的最小的数的迭代器</span></span><br><span class="line"><span class="comment">// map/multimap</span></span><br><span class="line"><span class="comment">//     insert()  插入的数是一个pair</span></span><br><span class="line"><span class="comment">//     erase()  输入的参数是pair或者迭代器</span></span><br><span class="line"><span class="comment">//     find()</span></span><br><span class="line"><span class="comment">//     []  注意multimap不支持此操作。 时间复杂度是 O(logn)</span></span><br><span class="line"><span class="comment">//     lower_bound()/upper_bound()</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="unordered-set-unordered-map-unordered-multiset-unordered-multimap"><a href="#unordered-set-unordered-map-unordered-multiset-unordered-multimap" class="headerlink" title="unordered_set unordered_map unordered_multiset unordered_multimap"></a>unordered_set unordered_map unordered_multiset unordered_multimap</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 和上面类似，增删改查的时间复杂度是 O(1)</span></span><br><span class="line"><span class="comment">// 不支持 lower_bound()/upper_bound()， 迭代器的++，--</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bitset&lt;10000&gt; s;</span></span><br><span class="line"><span class="comment">// ~, &amp;, |, ^</span></span><br><span class="line"><span class="comment">// &gt;&gt;, &lt;&lt;</span></span><br><span class="line"><span class="comment">// ==, !=</span></span><br><span class="line"><span class="comment">// []</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// count()  返回有多少个1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// any()  判断是否至少有一个1</span></span><br><span class="line"><span class="comment">// none()  判断是否全为0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// set()  把所有位置成1</span></span><br><span class="line"><span class="comment">// set(k, v)  将第k位变成v</span></span><br><span class="line"><span class="comment">// reset()  把所有位变成0</span></span><br><span class="line"><span class="comment">// flip()  等价于~</span></span><br><span class="line"><span class="comment">// flip(k) 把第k位取反</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/STL/" rel="tag"># STL</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/01/01/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="prev" title="哈希表">
+      <i class="fa fa-chevron-left"></i> 哈希表
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#STL"><span class="nav-number">1.</span> <span class="nav-text">STL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">1.1.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pair"><span class="nav-number">1.2.</span> <span class="nav-text">pair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">1.3.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-number">1.4.</span> <span class="nav-text">queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#priority-queue"><span class="nav-number">1.5.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-number">1.6.</span> <span class="nav-text">stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deque"><span class="nav-number">1.7.</span> <span class="nav-text">deque</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-map-multiset-multimap"><span class="nav-number">1.8.</span> <span class="nav-text">set map multiset multimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set-unordered-map-unordered-multiset-unordered-multimap"><span class="nav-number">1.9.</span> <span class="nav-text">unordered_set unordered_map unordered_multiset unordered_multimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bitset"><span class="nav-number">1.10.</span> <span class="nav-text">bitset</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LunaMyth"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LunaMyth</p>
+  <div class="site-description" itemprop="description">蘑菇酱~</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Madoka330" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Madoka330" rel="noopener" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1693462852" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1693462852" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://qm.qq.com/q/mm3d2HqVGg" title="QQ → https:&#x2F;&#x2F;qm.qq.com&#x2F;q&#x2F;mm3d2HqVGg" rel="noopener" target="_blank">QQ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LunaMyth</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">44k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">40 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
