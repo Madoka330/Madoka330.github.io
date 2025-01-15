@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="双指针">
+  <meta name="description" content="DFS深度优先搜索（Depth-First Search, DFS）是一种用于遍历或搜索树和图的算法。它沿着树或图的每一分支尽可能深入，直到到达叶节点或无法前进时再回溯。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双指针">
-<meta property="og:url" content="http://example.com/2024/12/10/%E5%8F%8C%E6%8C%87%E9%92%88/index.html">
+<meta property="og:title" content="DFS">
+<meta property="og:url" content="http://example.com/2025/01/14/DFS/index.html">
 <meta property="og:site_name" content="YuriCode">
-<meta property="og:description" content="双指针">
+<meta property="og:description" content="DFS深度优先搜索（Depth-First Search, DFS）是一种用于遍历或搜索树和图的算法。它沿着树或图的每一分支尽可能深入，直到到达叶节点或无法前进时再回溯。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-10T00:14:09.000Z">
-<meta property="article:modified_time" content="2025-01-08T15:19:12.191Z">
+<meta property="article:published_time" content="2025-01-14T01:27:51.000Z">
+<meta property="article:modified_time" content="2025-01-14T01:44:51.816Z">
 <meta property="article:author" content="LunaMyth">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="搜索">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2024/12/10/%E5%8F%8C%E6%8C%87%E9%92%88/">
+<link rel="canonical" href="http://example.com/2025/01/14/DFS/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>双指针 | YuriCode</title>
+  <title>DFS | YuriCode</title>
   
 
 
@@ -173,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/10/%E5%8F%8C%E6%8C%87%E9%92%88/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/14/DFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          双指针
+          DFS
         </h1>
 
         <div class="post-meta">
@@ -195,16 +195,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2024-12-10 08:14:09" itemprop="dateCreated datePublished" datetime="2024-12-10T08:14:09+08:00">2024-12-10</time>
+              <time title="创建时间：2025-01-14 09:27:51 / 修改时间：09:44:51" itemprop="dateCreated datePublished" datetime="2025-01-14T09:27:51+08:00">2025-01-14</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-01-08 23:19:12" itemprop="dateModified" datetime="2025-01-08T23:19:12+08:00">2025-01-08</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -221,7 +215,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -240,14 +234,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><span id="more"></span>
+        <h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><p>深度优先搜索（Depth-First Search, DFS）是一种用于遍历或搜索树和图的算法。它沿着树或图的每一分支尽可能深入，直到到达叶节点或无法前进时再回溯。</p>
+<span id="more"></span>
 
-<h3 id="最长连续不重复子序列"><a href="#最长连续不重复子序列" class="headerlink" title="最长连续不重复子序列"></a>最长连续不重复子序列</h3><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/801/">https://www.acwing.com/problem/content/801/</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="type">int</span> a[N], count[N];</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//最长连续不重复子序列    </span></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="comment">//输入n个数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="comment">//count[a[j]] 就是第j个元素出现的次数</span></span><br><span class="line">        count[a[j]]++;</span><br><span class="line">        <span class="comment">// i 向 j 靠近，直到找到和 j 重复的那个数退出循环</span></span><br><span class="line">        <span class="comment">//靠近的过程中，相当于舍弃了之前的那些的数字</span></span><br><span class="line">        <span class="comment">//所以把这些数字出现的次数 -1</span></span><br><span class="line">        <span class="keyword">while</span> (count[a[j]] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            count[a[i]]--;  </span><br><span class="line">            i++;        </span><br><span class="line">        &#125;</span><br><span class="line">        ans = <span class="built_in">max</span>(ans, j - i + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="按奇偶排序数组"><a href="#按奇偶排序数组" class="headerlink" title="按奇偶排序数组"></a>按奇偶排序数组</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-array-by-parity-ii/">https://leetcode.cn/problems/sort-array-by-parity-ii/</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">sortArrayByParityII</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> even = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> odd = <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> n = arr.<span class="built_in">size</span>();</span><br><span class="line">        <span class="comment">//把数组中最后一个元素看作缓冲位</span></span><br><span class="line">        <span class="comment">//然后通过不断的判断最后一位的奇偶性</span></span><br><span class="line">        <span class="comment">//然后与对应位置的数交换</span></span><br><span class="line">        <span class="comment">//每次交换后相应的位置都会发生变化</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n &amp;&amp; even &lt; n &amp;&amp; odd &lt; n;) &#123;</span><br><span class="line">             <span class="keyword">if</span> ((arr[n - <span class="number">1</span>] &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="built_in">swap</span>(arr[n - <span class="number">1</span>], arr[odd]);</span><br><span class="line">                odd += <span class="number">2</span>;</span><br><span class="line">             &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">swap</span>(arr[n - <span class="number">1</span>], arr[even]);</span><br><span class="line">                even += <span class="number">2</span>;</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+<h3 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> path[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 如果已经填满了 n 个数字，输出当前排列</span></span><br><span class="line">	<span class="keyword">if</span> (u == n) &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;dfs(&quot;</span> &lt;&lt; u &lt;&lt; <span class="string">&quot;)开始调用&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cout &lt;&lt; path[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">		cout &lt;&lt; endl &lt;&lt; <span class="string">&quot;--------------&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 遍历所有可能的数字</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="comment">// 如果数字 i 没有被使用过</span></span><br><span class="line">		<span class="keyword">if</span> (!st[i]) &#123;</span><br><span class="line">			<span class="comment">// 将数字 i 放入当前层的位置</span></span><br><span class="line">			path[u] = i;</span><br><span class="line">			<span class="comment">// 标记数字 i 为已使用</span></span><br><span class="line">			st[i] = <span class="literal">true</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 输出当前层的状态（递归开始）</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;dfs(&quot;</span> &lt;&lt; u &lt;&lt; <span class="string">&quot;)开始调用&quot;</span> &lt;&lt; endl;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">				cout &lt;&lt; st[j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">			&#125; </span><br><span class="line">			cout &lt;&lt; endl &lt;&lt; <span class="string">&quot;--------------&quot;</span> &lt;&lt; endl;</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 递归调用下一层</span></span><br><span class="line">			<span class="built_in">dfs</span>(u + <span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 回溯：撤销数字 i 的使用</span></span><br><span class="line">			st[i] = <span class="literal">false</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 输出当前层的状态（递归结束后回溯）</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;dfs(&quot;</span> &lt;&lt; u &lt;&lt; <span class="string">&quot;)调用结束&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;在当前层继续遍历，寻找下一个合适的数&quot;</span> &lt;&lt; endl;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">				cout &lt;&lt; st[j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">			&#125; </span><br><span class="line">			cout &lt;&lt; endl &lt;&lt; <span class="string">&quot;--------------&quot;</span> &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">dfs</span>(<span class="number">0</span>);</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -256,7 +246,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag"># 搜索</a>
           </div>
 
         
@@ -265,13 +255,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/12/08/%E9%93%BE%E8%A1%A8/" rel="prev" title="链表">
-      <i class="fa fa-chevron-left"></i> 链表
+    <a href="/2025/01/03/STL%E5%AE%B9%E5%99%A8/" rel="prev" title="STL容器">
+      <i class="fa fa-chevron-left"></i> STL容器
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/12/20/%E6%A0%88/" rel="next" title="栈">
-      栈 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -330,7 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-number">1.</span> <span class="nav-text">双指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-number">1.1.</span> <span class="nav-text">最长连续不重复子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E5%A5%87%E5%81%B6%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">按奇偶排序数组</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS"><span class="nav-number">1.</span> <span class="nav-text">DFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E6%8E%92%E5%88%97"><span class="nav-number">1.1.</span> <span class="nav-text">全排列</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
