@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="滑动窗口滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。">
+  <meta name="description" content="最小生成树最小生成树（英语：Minimum spanning tree，简称MST）是最小权重生成树（英语：Minimum weight spanning tree）的简称，是一个连通加权无向图中一棵权值最小的生成树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滑动窗口">
-<meta property="og:url" content="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/index.html">
+<meta property="og:title" content="最小生成树">
+<meta property="og:url" content="http://example.com/2025/02/12/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/index.html">
 <meta property="og:site_name" content="YuriCode">
-<meta property="og:description" content="滑动窗口滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。">
+<meta property="og:description" content="最小生成树最小生成树（英语：Minimum spanning tree，简称MST）是最小权重生成树（英语：Minimum weight spanning tree）的简称，是一个连通加权无向图中一棵权值最小的生成树">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-02T02:46:35.000Z">
-<meta property="article:modified_time" content="2024-12-02T03:47:02.685Z">
+<meta property="article:published_time" content="2025-02-12T05:25:49.000Z">
+<meta property="article:modified_time" content="2025-02-12T05:37:02.167Z">
 <meta property="article:author" content="LunaMyth">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="树">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+<link rel="canonical" href="http://example.com/2025/02/12/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>滑动窗口 | YuriCode</title>
+  <title>最小生成树 | YuriCode</title>
   
 
 
@@ -173,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/12/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          滑动窗口
+          最小生成树
         </h1>
 
         <div class="post-meta">
@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-12-02 10:46:35 / 修改时间：11:47:02" itemprop="dateCreated datePublished" datetime="2024-12-02T10:46:35+08:00">2024-12-02</time>
+              <time title="创建时间：2025-02-12 13:25:49 / 修改时间：13:37:02" itemprop="dateCreated datePublished" datetime="2025-02-12T13:25:49+08:00">2025-02-12</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -205,7 +205,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
                 </span>
             </span>
 
@@ -215,7 +215,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>914</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -234,13 +234,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>滑动窗口（Sliding Window）是一种常用的算法技巧，通常用于解决涉及子数组或子序列的最优化问题。它的核心思想是利用两个指针（窗口的左右边界），通过动态调整窗口的大小来遍历数据结构，从而有效地解决问题。</p>
+        <h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><p>最小生成树（英语：Minimum spanning tree，简称MST）是最小权重生成树（英语：Minimum weight spanning tree）的简称，是一个连通加权无向图中一棵权值最小的生成树</p>
 <span id="more"></span>
 
-<h3 id="长度最小的子数组（leetcode-209）"><a href="#长度最小的子数组（leetcode-209）" class="headerlink" title="长度最小的子数组（leetcode.209）"></a>长度最小的子数组（leetcode.209）</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/description/?envType=problem-list-v2&envId=sliding-window">https://leetcode.cn/problems/minimum-size-subarray-sum/description/?envType=problem-list-v2&amp;envId=sliding-window</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 左指针 l, 右指针 r, 当前窗口的和 sum, 最终答案 ans 初始化为 INT_MAX</span></span><br><span class="line">        <span class="type">int</span> l = <span class="number">0</span>, r = <span class="number">0</span>, sum = <span class="number">0</span>, ans = INT_MAX;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span> (r = <span class="number">0</span>; r &lt; nums.<span class="built_in">size</span>(); r++) &#123;</span><br><span class="line">            sum += nums[r];  </span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前窗口的和 sum 大于或等于 target，尝试缩小窗口</span></span><br><span class="line">            <span class="keyword">while</span> (sum - nums[l] &gt;= target) &#123;</span><br><span class="line">                sum -= nums[l++];  <span class="comment">// 左指针向右滑动，减少窗口和 sum</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前窗口的和 sum 大于或等于 target，更新答案</span></span><br><span class="line">            <span class="keyword">if</span> (sum &gt;= target) &#123;</span><br><span class="line">                ans = <span class="built_in">min</span>(ans, r - l + <span class="number">1</span>);  <span class="comment">// 更新最小窗口长度</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果没有找到符合条件的子数组，返回 0，否则返回最小长度</span></span><br><span class="line">        <span class="keyword">return</span> ans == INT_MAX ? <span class="number">0</span> : ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="无重复字符的最长字串（leetcode-3）"><a href="#无重复字符的最长字串（leetcode-3）" class="headerlink" title="无重复字符的最长字串（leetcode.3）"></a>无重复字符的最长字串（leetcode.3）</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=problem-list-v2&envId=sliding-window">https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=problem-list-v2&amp;envId=sliding-window</a></p>
+<h3 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Kruskal算法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1, 将所有边按权重从小到大排序</span></span><br><span class="line"><span class="comment">// 2, 枚举每条边 a-b, 权重是c</span></span><br><span class="line"><span class="comment">// 如果a, b不连通, 将这条边加入在集合当中</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1000010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> p[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Edge</span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, w;</span><br><span class="line">&#125; edge[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Edge x, Edge y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x.w &lt; y.w;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (p[x] != x) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">	<span class="keyword">return</span> p[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">		<span class="type">int</span> a, b, w;</span><br><span class="line">		cin &gt;&gt; a &gt;&gt; b &gt;&gt; w;</span><br><span class="line">		edge[i] = &#123;a, b, w&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">sort</span>(edge, edge + m, cmp);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) p[i] = i;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">		<span class="type">int</span> a = edge[i].a, b = edge[i].b, w = edge[i].w;</span><br><span class="line">		a = <span class="built_in">find</span>(a); b = <span class="built_in">find</span>(b);</span><br><span class="line">		<span class="keyword">if</span> (a != b) &#123;</span><br><span class="line">			p[a] = b;</span><br><span class="line">			ans += w;</span><br><span class="line">			cnt++;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (cnt &lt; n - <span class="number">1</span>) &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;impossible&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span> t = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//	cin &gt;&gt; t;</span></span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -250,7 +247,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%A0%91/" rel="tag"># 树</a>
           </div>
 
         
@@ -259,13 +256,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/11/30/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%A7%E5%90%88%E9%9B%86/" rel="prev" title="排序算法大合集">
-      <i class="fa fa-chevron-left"></i> 排序算法大合集
+    <a href="/2025/01/23/%E8%B4%AA%E5%BF%83/" rel="prev" title="贪心">
+      <i class="fa fa-chevron-left"></i> 贪心
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/12/03/%E6%9C%89%E8%B6%A3%E7%9A%84%E9%A2%98%E8%A7%A3/" rel="next" title="有趣的题解">
-      有趣的题解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -324,7 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">滑动窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%EF%BC%88leetcode-209%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">长度最小的子数组（leetcode.209）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2%EF%BC%88leetcode-3%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">无重复字符的最长字串（leetcode.3）</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal%E7%AE%97%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">Kruskal算法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
